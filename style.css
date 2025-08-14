@@ -1,0 +1,33 @@
+html {
+    background-color: rgb(165, 207, 243);
+}
+
+.PersonData{
+    background-color: rgb(153, 175, 194);
+}
+
+.ProfissionalData {
+    background-color: rgb(153, 175, 194);
+    padding-left: 40%;
+    padding-bottom: 30%;
+}
+
+.AcademicData {
+    background-color: rgb(153, 175, 194);
+}
+
+.Language {
+    background-color: rgb(153, 175, 194);
+}
+
+.SendData{
+    margin-left: 1150px;
+}
+
+.SendData #btn {
+    text-align: center;
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    text-size-adjust: 50px;
+}
