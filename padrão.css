@@ -1,0 +1,88 @@
+/* ========================================================================
+    padrão.css: Estilos padrão para cores, fontes e formatação.
+    ========================================================================
+*/
+
+/* Definição de variáveis (custom properties) para cores e tamanhos. 
+    Isso torna fácil alterar o tema da sua página em um único lugar.
+*/
+:root {
+    --cor-fundo: #a5cff3; /* Cor de fundo principal */
+    --cor-secundaria: #99afc2; /* Cor de fundo para os blocos de dados */
+    --cor-texto: #333333; /* Cor do texto padrão */
+    --borda-arredondada: 10px; /* Borda padrão para elementos arredondados */
+    --espacamento-vertical: 20px; /* Espaçamento entre os blocos */
+    --sombra-caixa: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para os blocos */
+}
+
+/* Estilos globais:
+    - Define a cor de fundo e a cor do texto para toda a página.
+    - Usa a fonte "Inter" para um visual moderno e limpo.
+*/
+body {
+    background-color: var(--cor-fundo);
+    font-family: 'Inter', sans-serif;
+    color: var(--cor-texto);
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 20px; /* Adiciona um padding para espaçamento geral */
+}
+
+/* Contêiner principal para centralizar os blocos de dados.
+    - display: flex e justify-content: center são usados para alinhar 
+      os elementos na horizontal.
+    - flex-wrap: wrap garante que os itens se ajustem em telas menores, 
+      criando uma nova linha se necessário.
+    - align-items: flex-start alinha os itens pelo topo, criando uma 
+      aparência mais organizada.
+    - margin: 0 auto; centraliza o contêiner na página.
+*/
+.data-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--espacamento-vertical); /* Espaço entre os blocos */
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin: 0 auto;
+}
+
+/* Estilos para os blocos de dados.
+    - background-color usa a variável --cor-secundaria.
+    - padding e border-radius usam as variáveis para consistência.
+    - box-shadow adiciona um efeito de profundidade.
+    - flex: 1 1 250px; faz com que os itens se ajustem de forma flexível.
+*/
+.PersonData,
+.ProfissionalData,
+.AcademicData,
+.Language {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-caixa);
+    flex: 1 1 250px; /* Cresce, encolhe e tem um tamanho base de 250px */
+}
+
+/* Estilos para o botão "Enviar".
+    - text-align: center para centralizar o botão no contêiner.
+    - #btn tem um estilo moderno com bordas arredondadas e efeito de transição.
+*/
+.SendData {
+    width: 100%; /* Faz o contêiner do botão ocupar a largura total */
+    text-align: center;
+    margin-top: 40px; /* Espaço acima do botão */
+}
+
+#btn {
+    background-color: var(--cor-texto);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+    background-color: #555555;
+}
