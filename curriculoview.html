@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Resultado do Currículo</h1>
+    <div id="resultado"></div>
+
+    <script>
+        // Recuperar os dados da URL
+        const params = new URLSearchParams(window.location.search);
+        let html = "<ul>";
+
+        for (const [key, value] of params.entries()) {
+            html += `<li><strong>${key}:</strong> ${decodeURIComponent(value)}</li>`;
+        }
+
+        html += "</ul>";
+        document.getElementById("resultado").innerHTML = html;
+    </script>
+</body>
+</html>

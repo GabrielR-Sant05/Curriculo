@@ -10,61 +10,84 @@
 <body>
     <div class="PersonData" style="font-size: larger;">
         <h1>Dados Pessoais</h1>
-        <label for="NomeCompleto">Nome Completo:
-            <input type="text">
-        </label>
+        <label for="Nome">Nome Completo: </label>
+        <input type="text" id="Nome">
 
-        <p>Telefone: </p>
-        <input type="number">
+        <label for="Telefone">Telefone: </label>
+        <input type="text" id="Telefone">
 
-        <p>Endereço: </p>
-        <input type="text">
+        <label for="Endereço">Endereço: </label>
+        <input type="text" id="Endereço">
 
-        <p>Data de Nascimento: </p>
-        <input type="datetime">
+        <label for="Data de Nascimento">Data de Nascimento: </label>
+        <input type="datetime" id="Data de Nascimento">
     </div>
 
     <div class="ProfissionalData">
         <h1>Histórico Profissional</h1>
-        <p>Nome da Empresa: </p>
-        <input type="text">
+        <label for="Empresa">Nome da Empresa: </label>
+        <input type="text" id="Empresa">
 
-        <p>Data de admissão: </p>
-        <input type="datetime">
+        <label for="data de Admissão">Data de Admissão: </label>
+        <input type="datetime" id="Data de Admissão">
 
-        <p>Data de Demissão: </p>
-        <input type="datetime">
+        <label for="Data de Demissão">Data de Demissão: </label>
+        <input type="datetime" id="Data de Demissão">
 
-        <p>Cargo Ocupado: </p>
-        <input type="text">
+        <label for="Cargo">Cargo Ocupado: </label>
+        <input type="text" id="Cargo">
 
-        <p>Descrição do Cargo: </p>
-        <input type="text">
+        <label for="Descrição do Cargo">Descrição do Cargo: </label>
+        <input type="text" id="Descrição do Cargo">
     </div>
 
     <div class="AcademicData">
         <h1>Formação Acadêmica</h1>
-        <p>Nome do Curso</p>
-        <input type="text">
+        <label for="Curso">Nome do Curso</label>
+        <input type="text" id="Curso">
 
-        <p>instituição</p>
-        <input type="text">
+        <label for="Instituição">instituição</label>
+        <input type="text" id="Instituição">
         
-        <p>Ano de Conclusão</p>
-        <input type="text">
+        <label for="Ano de Conclusao">Ano de Conclusão</label>
+        <input type="text" id="Ano de Conclusão">
     </div>
 
     <div class="Language">
         <h1>Idiomas</h1>
-        <p>Nome do Idioma</p>
-        <input type="text">
+        <label for="Idioma">Nome do Idioma</label>
+        <input type="text" id="Idioma">
 
-        <p>Nível de Proeficiência</p>
-        <input type="text">
+        <label for="Nível de Proeficiência">Nível de Proeficiência</label>
+        <input type="text" id="Nível de Proeficiência">
     </div>
 
     <div id="Send" class="SendData">
-        <input type="button" value="Enviar" id="btn">
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
     </div>
 </body>
+
+<script>
+    function enviarFormulario() {
+        const dados = {
+            Nome: document.getElementById("Nome").value,
+            Telefone: document.getElementById("Telefone").value,
+            Endereço: document.getElementById("Endereço").value,
+            DataNascimento: document.getElementById("Data de Nascimento").value,
+            Empresa: document.getElementById("Empresa").value,
+            DataAdmissão: document.getElementById("Data de Admissão").value,
+            DataDemissão: document.getElementById("Data de Demissão").value,
+            Cargo: document.getElementById("Cargo").value,
+            DescriçãoCargo: document.getElementById("Descrição do Cargo").value,
+            Curso: document.getElementById("Curso").value,
+            Instituição: document.getElementById("Instituição").value,
+            AnoConclusão: document.getElementById("Ano de Conclusão").value,
+            Idioma: document.getElementById("Idioma").value,
+            NívelProeficiência: document.getElementById("Nível de Proeficiência").value
+        };
+
+        const queryParams = new URLSearchParams(dados).toString();
+        window.open("curriculoview.html?" + queryParams, "_blank");
+    }
+</script>
 </html>
