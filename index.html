@@ -9,60 +9,60 @@
 <body>
     <div class="PersonData" style="font-size: larger;">
         <h1>Dados Pessoais</h1>
-        <p>Nome Completo: </p>
-        <input type="text">
+        <label for="nome">Nome Completo: </label>
+        <input type="text" id="nome">
 
-        <p>Telefone: </p>
-        <input type="number">
+        <label for="telefone">Telefone: </label>
+        <input type="text" id="telefone">
 
-        <p>Endereço: </p>
-        <input type="text">
+        <label for="endereco">Endereço: </label>
+        <input type="text" id="endereco">
 
-        <p>Data de Nascimento: </p>
-        <input type="datetime">
+        <label for="datan">Data de Nascimento: </label>
+        <input type="datetime" id="datan">
     </div>
 
     <div class="ProfissionalData">
         <h1>Histórico Profissional</h1>
-        <p>Nome da Empresa: </p>
-        <input type="text">
+        <label for="empresa">Nome da Empresa: </label>
+        <input type="text" id="empresa">
 
-        <p>Data de admissão: </p>
-        <input type="datetime">
+        <label for="dataa">Data de admissão: </label>
+        <input type="datetime" id="dataa">
 
-        <p>Data de Demissão: </p>
-        <input type="datetime">
+        <label for="datad">Data de Demissão: </label>
+        <input type="datetime" id="datad">
 
-        <p>Cargo Ocupado: </p>
-        <input type="text">
+        <label for="cargo">Cargo Ocupado: </label>
+        <input type="text" id="cargo">
 
-        <p>Descrição do Cargo: </p>
-        <input type="text">
+        <label for="cargodesc">Descrição do Cargo: </label>
+        <input type="text" id="cargodesc">
     </div>
 
     <div class="AcademicData">
         <h1>Formação Acadêmica</h1>
-        <p>Nome do Curso</p>
-        <input type="text">
+        <label for="curso">Nome do Curso</label>
+        <input type="text" id="curso">
 
-        <p>instituição</p>
-        <input type="text">
+        <label for="instituicao">instituição</label>
+        <input type="text" id="instituicao">
         
-        <p>Ano de Conclusão</p>
-        <input type="text">
+        <label for="anoconclusao">Ano de Conclusão</label>
+        <input type="text" id="anoconclusao">
     </div>
 
     <div class="Language">
         <h1>Idiomas</h1>
-        <p>Nome do Idioma</p>
-        <input type="text">
+        <label for="idioma">Nome do Idioma</label>
+        <input type="text" id="idioma">
 
-        <p>Nível de Proeficiência</p>
-        <input type="text">
+        <label for="nivelproeficiencia">Nível de Proeficiência</label>
+        <input type="text" id="nivelproeficiencia">
     </div>
 
     <div id="Send" class="SendData">
-        <input type="button" value="Enviar" id="btn">
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
     </div>
 </body>
 </html>
